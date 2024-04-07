@@ -8,8 +8,12 @@
 
 import Foundation
 
-// creating an array of Landmark type using Landmark type we have created
-var landmarks: [Landmark] = load("landmarkData.json")
+@Observable
+class ModelData {
+    /// Abstract: We have a class "ModelData" that has a property "landmarks" that contains an Array of Landmark Type objects
+    /// the data of the array is obtained by calling a load() utility that gets the data from a json file;
+    var landmarks: [Landmark] = load("landmarkData.json")
+}
 
 // MARK: Utility function to load a json file from the local bundle
 func load<T: Decodable>(_ filename: String) -> T {

@@ -5,7 +5,7 @@ import CoreLocation
 
 
 struct Landmark: Hashable, Codable, Identifiable {
-    // Abstact: Landmark model that coresponds to our JSON data;
+    // Abstract: Landmark model that coresponds to our JSON data;
     /// We add codable to make the data easier to "travel" between docs in an iOS project
     
     // MARK: BASIC DATA about parks
@@ -14,13 +14,12 @@ struct Landmark: Hashable, Codable, Identifiable {
     var park: String
     var state: String
     var description: String
+    var isFavorite: Bool
     
      // MARK: IMAGES
     // Creating an image entity:
     private var imageName: String
-    var image: Image {
-        Image(imageName)
-    }
+    var image: Image { Image(imageName) }
     
      // MARK: COORDINATES
     // Creating a Coordinates Type:

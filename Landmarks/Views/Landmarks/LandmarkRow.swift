@@ -14,22 +14,30 @@ struct LandmarkRow: View {
     // - based on data we receive, the content will be desplayed accordingly;
     var landmark: Landmark
     
-    var body: some View {
+    var body: some View {     
         HStack {
             landmark.image
                 .resizable()
                 .frame(width: 50, height: 50)
             
             Text(landmark.name)
+            
             Spacer()
+            
+            if landmark.isFavorite {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            }
         }
     }
 }
 
 #Preview ("Turtle Rock") {
+    let landmarks = ModelData().landmarks
     
-    Group { // just for displaying puproses. Final view looks like above
+    return Group { // just for displaying puproses. Final view looks like above
         LandmarkRow(landmark: landmarks[0])
+        LandmarkRow(landmark: landmarks[1])
     }
 }
 
