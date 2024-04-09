@@ -1,3 +1,3 @@
-# Completed project: Creating and combining views
+# Completed project: Animating views and transitions
 
-Explore the completed project for the [Creating and combining views](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views) tutorial.
+Explore the completed project for the [Animating views and transitions](https://developer.apple.com/tutorials/swiftui/animating-views-and-transitions) tutorial.

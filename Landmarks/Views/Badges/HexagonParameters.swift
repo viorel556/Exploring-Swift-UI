@@ -1,12 +1,11 @@
-//
-//  HexagonParameters.swift
-//  Landmarks
-//
-//  Created by Viorel Harabaru  on 08.04.2024.
-//  Copyright © 2024 Apple. All rights reserved.
-//
+/*
+See the LICENSE.txt file for this sample’s licensing information.
 
-import Foundation
+Abstract:
+Size, position, and other information used to draw a badge.
+*/
+
+import CoreGraphics
 
 struct HexagonParameters {
     struct Segment {
@@ -14,10 +13,8 @@ struct HexagonParameters {
         let curve: CGPoint
         let control: CGPoint
     }
-    
+
     static let adjustment: CGFloat = 0.085
-    
-    
     static let segments = [
         Segment(
             line:    CGPoint(x: 0.60, y: 0.05),
@@ -50,5 +47,4 @@ struct HexagonParameters {
             control: CGPoint(x: 1.00, y: 0.25 + adjustment)
         )
     ]
-    
 }
